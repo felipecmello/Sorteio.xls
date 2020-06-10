@@ -114,7 +114,7 @@ namespace Sorteio
                 OleDbConnection conexao = new OleDbConnection("Provider=Microsoft.Jet.OLEDB.4.0;" +
                 "Data Source=" + txFile.Text + ";" +
                 "Extended Properties=Excel 8.0;");
-                OleDbDataAdapter da = new OleDbDataAdapter("Select * From [Plan1$]", conexao);
+                OleDbDataAdapter da = new OleDbDataAdapter("Select * From [Planilha1$]", conexao);
                 da.Fill(ds);
                 dgv.DataSource = ds.Tables[0];
                 dgv.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
