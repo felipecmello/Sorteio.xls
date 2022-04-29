@@ -33,6 +33,7 @@
             this.welcomeWizardPage1 = new DevExpress.XtraWizard.WelcomeWizardPage();
             this.btGerarArquivo = new System.Windows.Forms.Button();
             this.wizardPage1 = new DevExpress.XtraWizard.WizardPage();
+            this.ckBotao = new System.Windows.Forms.CheckBox();
             this.btSorteio = new System.Windows.Forms.Button();
             this.grSorteio = new System.Windows.Forms.GroupBox();
             this.dgv = new System.Windows.Forms.DataGridView();
@@ -47,7 +48,6 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.completionWizardPage1 = new DevExpress.XtraWizard.CompletionWizardPage();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.ckBotao = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.wizardControl1)).BeginInit();
             this.wizardControl1.SuspendLayout();
             this.welcomeWizardPage1.SuspendLayout();
@@ -112,6 +112,18 @@
             this.wizardPage1.Name = "wizardPage1";
             this.wizardPage1.Size = new System.Drawing.Size(652, 416);
             this.wizardPage1.Text = "Base de Dados";
+            // 
+            // ckBotao
+            // 
+            this.ckBotao.AutoSize = true;
+            this.ckBotao.Checked = true;
+            this.ckBotao.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.ckBotao.Location = new System.Drawing.Point(7, 376);
+            this.ckBotao.Name = "ckBotao";
+            this.ckBotao.Size = new System.Drawing.Size(272, 30);
+            this.ckBotao.TabIndex = 31;
+            this.ckBotao.Text = "Botão SORTEAR:\r\nExibir botão para sortear. (Além de clicar na imagem)";
+            this.ckBotao.UseVisualStyleBackColor = true;
             // 
             // btSorteio
             // 
@@ -254,18 +266,6 @@
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
             // 
-            // ckBotao
-            // 
-            this.ckBotao.AutoSize = true;
-            this.ckBotao.Checked = true;
-            this.ckBotao.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.ckBotao.Location = new System.Drawing.Point(7, 376);
-            this.ckBotao.Name = "ckBotao";
-            this.ckBotao.Size = new System.Drawing.Size(272, 30);
-            this.ckBotao.TabIndex = 31;
-            this.ckBotao.Text = "Botão SORTEAR:\r\nExibir botão para sortear. (Além de clicar na imagem)";
-            this.ckBotao.UseVisualStyleBackColor = true;
-            // 
             // frmParametrizador
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -282,6 +282,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Parâmetros do Sorteio";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmParametrizador_FormClosed);
+            this.Load += new System.EventHandler(this.frmParametrizador_Load);
             ((System.ComponentModel.ISupportInitialize)(this.wizardControl1)).EndInit();
             this.wizardControl1.ResumeLayout(false);
             this.welcomeWizardPage1.ResumeLayout(false);

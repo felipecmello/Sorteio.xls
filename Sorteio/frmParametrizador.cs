@@ -67,9 +67,7 @@ namespace Sorteio
 
                 string caminho = salvar.FileName;
 
-                WorkBook.SaveAs(caminho, Microsoft.Office.Interop.Excel.XlFileFormat.xlWorkbookNormal, misValue, misValue, misValue, misValue,
-
-                Microsoft.Office.Interop.Excel.XlSaveAsAccessMode.xlExclusive, misValue, misValue, misValue, misValue, misValue);
+                WorkBook.SaveAs(caminho, Microsoft.Office.Interop.Excel.XlFileFormat.xlWorkbookNormal, misValue, misValue, misValue, misValue, Microsoft.Office.Interop.Excel.XlSaveAsAccessMode.xlExclusive, misValue, misValue, misValue, misValue, misValue);
                 WorkBook.Close(true, misValue, misValue);
                 App.Quit();
 
@@ -114,7 +112,7 @@ namespace Sorteio
                 OleDbConnection conexao = new OleDbConnection("Provider=Microsoft.Jet.OLEDB.4.0;" +
                 "Data Source=" + txFile.Text + ";" +
                 "Extended Properties=Excel 8.0;");
-                OleDbDataAdapter da = new OleDbDataAdapter("Select * From [Planilha1$]", conexao);
+                OleDbDataAdapter da = new OleDbDataAdapter("Select * From [Plan1$]", conexao);
                 da.Fill(ds);
                 dgv.DataSource = ds.Tables[0];
                 dgv.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
@@ -278,6 +276,11 @@ namespace Sorteio
             }
 
             Application.Exit();
+        }
+
+        private void frmParametrizador_Load(object sender, EventArgs e)
+        {
+
         }        
     }
 }

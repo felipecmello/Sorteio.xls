@@ -33,17 +33,18 @@ namespace Sorteio
 
             if (dgvSorteio.Rows[numSorteado].Cells[2].Value.ToString() == "N")
             {
-                if (txNome.Text != "")
-                {
-                    txAnteriores.Text = numSorteios + ". " + txNome.Text + '\n' + txAnteriores.Text;
-                }
+                //if (txNome.Text != "")
+                //{
+                //    txAnteriores.Text = numSorteios + ". " + txNome.Text + '\n' + txAnteriores.Text;
+                //}
 
                 txEvento.Text = dgvSorteio.Rows[numSorteado].Cells[1].Value.ToString();
                 txNome.Text = dgvSorteio.Rows[numSorteado].Cells[0].Value.ToString();
                 dgvSorteio.Rows[numSorteado].Cells[2].Value = "S";
-
                 numSorteios++;
                 lbSorteios.Text = "Sorteios Realizados: " + numSorteios;
+
+                txAnteriores.Text = numSorteios + ". " + txNome.Text + '\n' + txAnteriores.Text;
             }
         }
 
