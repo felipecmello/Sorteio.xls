@@ -9,7 +9,7 @@ Software para realização de sorteios a partir de um arquivo do Microsoft Excel
 | :rocket: URL         | https://github.com/felipecmello/Sorteio.xls
 
 <!-- Inserir imagem com a #vitrinedev ao final do link -->
-![](https://via.placeholder.com/1200x500.png?text=imagem+lindona+do+meu+projeto#vitrinedev)
+![](https://raw.githubusercontent.com/felipecmello/Sorteio.xls/master/ImagemProjeto.png#vitrinedev)
 
 ## Detalhes do projeto
 
